@@ -7,8 +7,9 @@ class DBConnect implements DBConnectInterface {
 
     public function __construct(string $serverAddress,
                                 string $username,
+                                string $password,
                                 string $dbName) {
-        $this->conn = new mysqli($serverAddress, $username, null, $dbName);
+        $this->conn = new mysqli($serverAddress, $username, $password, $dbName);
 
         if ($this->conn->connect_error) {
             die("Нет соединения с БД! " . $this->conn->connect_error);

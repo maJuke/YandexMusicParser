@@ -8,7 +8,7 @@ require_once 'ArtistParser.php';
 require_once 'ArtistRepository.php';
 require_once 'MusicParser.php';
 
-$dbConnect = new DBConnect("localhost", "root", "yandex_music");
+$dbConnect = new DBConnect("localhost", "root", "", "yandex_music");
 $jsonFetcher = new JsonFetcher();
 $trackParser = new TrackParser();
 $trackRepository = new TrackRepository($dbConnect);
